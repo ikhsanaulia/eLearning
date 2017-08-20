@@ -2,18 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Web Desain</title>
+<title>https://infobelajarweb.wordpress.com/2014/03/22/membuat-halaman-informasi-mahasiswa-1/</title>
 </head>
 
 <body>
-	<div id="home">
-    	<div id="kepala">BIMBINGAN KONSELING</div>
-        <div id="menu"></div>
-        <div id="kanan"></div>
-        <div id="tengah"></div>
-        <div id="kiri"></div>
-        <div id="kaki"></div>
-        
-    </div>
+<?php
+session_start();
+session_destroy();
+echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+?>
 </body>
 </html>
