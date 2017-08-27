@@ -1,5 +1,8 @@
 <?php require_once('Connections/koneksi.php'); ?>
 <?php
+
+session_start();
+
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
@@ -32,10 +35,6 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 ?>
 <?php
-// *** Validate request to login to this site.
-if (!isset($_SESSION)) {
-  session_start();
-}
 
 $loginFormAction = $_SERVER['PHP_SELF'];
 if (isset($_GET['accesscheck'])) {

@@ -1,6 +1,6 @@
 <?php require_once('Connections/koneksi.php'); ?>
 <?php
-
+session_start(); 
 mysql_select_db($database_koneksi, $koneksi);
 $query_Recordset1 = "SELECT * FROM data_siswa WHERE nama = ''".$_SESSION['MM_Username']." ORDER BY id DESC";
 $Recordset1 = mysql_query($query_Recordset1, $koneksi) or die(mysql_error());
@@ -43,7 +43,7 @@ th {
 	
 	 { ?>
       <tr>
-        <td>Nilai</td>
+        <td>Nilai : <?php echo $_SESSION['MM_Username']; ?></td>
         <td>
 			<?php 
 				$nilai = $row_Recordset1['nilai'];
