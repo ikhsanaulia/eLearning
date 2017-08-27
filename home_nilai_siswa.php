@@ -67,10 +67,10 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
   <h3 class="w3-padding-64 w3-center"><b>SMA<br>105 Jakarta</b></h3>
-   
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  
   <? include "menu_siswa.php"; ?>
 </nav>
-
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-10">
 <span class="w3-left w3-padding">SOME NAME</span>
@@ -86,13 +86,13 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 <div style="padding-top:10px;">
-<?php include 'colom_materi.php';?>
+<?php include 'nilai_siswa.php';?>
 </div>
 <!-- login -->
 <div id="id01" class="w3-modal">
   <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
     <div class="w3-center"><br>
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span><img src="img/4oFNkDeO.jpeg" alt="Avatar" style="width:30%"  w3-margin-top"></div>
+      <span onClick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span><img src="img/4oFNkDeO.jpeg" alt="Avatar" style="width:30%"  w3-margin-top"></div>
     <form class="w3-container" action="/action_page.php">
       <div class="w3-section">
         <label><b>Username</b></label>
@@ -104,7 +104,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         Remember me</div>
     </form>
     <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-      <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+      <button onClick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
       <span class="w3-right w3-padding w3-hide-small">Forgot<a href="#">password?</a></span></div>
   </div>
 </div>
@@ -121,7 +121,13 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 
-
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
 </script>
 </body>
