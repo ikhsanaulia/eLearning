@@ -2,7 +2,7 @@
 <?php
 session_start();
 mysql_select_db($database_koneksi, $koneksi);
-$query_Recordset1 = "SELECT * FROM data_siswa WHERE nama = ''".$_SESSION['MM_Username']." ORDER BY id DESC";
+$query_Recordset1 = "SELECT * FROM data_siswa WHERE nama = '".$_SESSION['MM_Username']."' ORDER BY id DESC";
 $Recordset1 = mysql_query($query_Recordset1, $koneksi) or die(mysql_error());
 $row_Recordset1 = mysql_fetch_assoc($Recordset1);
 $totalRows_Recordset1 = mysql_num_rows($Recordset1);
