@@ -68,10 +68,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
   <h3 class="w3-padding-64 w3-center"><b>SMA<br>105 Jakarta</b></h3>
    
-  <a href="home_materi_siswa.php" onclick="w3_close()" class="w3-bar-item w3-button">MATERI SISWA</a>
-  <a href="home_soal_siswa.php" onclick="w3_close()" class="w3-bar-item w3-button">SOAL ESAI</a>
-   <a href="home_soal_pg_siswa.php" onclick="w3_close()" class="w3-bar-item w3-button">SOAL PILIHAN GANDA</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">LOGOUT</a>
+  <?php include "menu_siswa.php" ?>
 </nav>
 
 <!-- Top menu on small screens -->

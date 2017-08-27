@@ -70,7 +70,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
   
 
-  <? include "menu_siswa.php"; ?>
+  <?php  include "menu_siswa.php"; ?>
 </nav>
 
 <!-- Top menu on small screens -->

@@ -68,7 +68,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
   <h3 class="w3-padding-64 w3-center"><b>SMA<br>105 Jakarta</b></h3>
    
-  <? include "menu_siswa.php"; ?>
+  <?php  include "menu_siswa.php"; ?>
 </nav>
 
 <!-- Top menu on small screens -->
